@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-   from typing import Callable
+'''
+type-annotated function
+'''
+from typing import Callable
 
-   def make_multiplier(multiplier: float) -> Callable[[float], float]:
-       def multiplier_func(x: float) -> float:
-           return x * multiplier
-       return multiplier_func
+
+def make_multiplier(multiplier: float) -> Callable[[float], float]:
+    '''multiplier float uses callable from typing
+    '''
+    return lambda x: x * multiplier
